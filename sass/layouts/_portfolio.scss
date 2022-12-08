@@ -1,0 +1,77 @@
+.portfolio {
+  padding: 94px 0;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-link {
+  display: block;
+  cursor: pointer;
+  transition: box-shadow 250ms var(--cubic-bezier);
+}
+
+.portfolio-link:hover {
+  box-shadow: var(--portfolio-link-shadow);
+}
+
+.portfolio-wrap {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.portfolio-item {
+  background-color: var(--color-white);
+}
+
+.portfolio-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-box {
+  @include size(100%, 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  background: var(--portfolio-wrap);
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic-bezier);
+  .portfolio-link:hover &,
+  .portfolio-link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio-box-text {
+  @include font(null, 18px, 1.56, 0.03em);
+  color: var(--color-white);
+}
+
+.portfolio-item-title {
+  @include font(null, 18px, 2, 0.06em);
+  color: var(--primary-grey-dark);
+  margin-bottom: 4px;
+}
+
+.portfolio-item-text {
+  @include font(null, 16px, 1.88, 0.03em);
+  color: var(--secondary-grey);
+}
+
+.portfolio-btn {
+  transition: color 250ms var(--cubic-bezier), background-color 250ms var(--cubic-bezier),
+    box-shadow 250ms var(--cubic-bezier);
+  &:hover,
+  &:focus {
+    color: var(--color-white);
+    background-color: var(--current-active);
+    box-shadow: var(--portfolio-btn-shadow);
+  }
+}

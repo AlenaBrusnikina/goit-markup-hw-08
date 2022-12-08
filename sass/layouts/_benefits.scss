@@ -1,0 +1,26 @@
+.benefits {
+  padding: 94px 0;
+}
+
+.benefits-list {
+  @include flex(flex, null, null);
+  gap: 30px;
+  &__item {
+    flex-basis: calc((100% - 7.5%) / 4);
+  }
+  &__icon {
+    @include flex(flex, center, center);
+    height: 120px;
+    background-color: var(--btn-bg);
+    margin-bottom: 28px;
+  }
+  &__title {
+    @include font(null, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include font(null, 14px, 1.71, 0.03em);
+    color: var(--secondary-grey);
+  }
+}

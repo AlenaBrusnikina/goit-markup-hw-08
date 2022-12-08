@@ -1,0 +1,20 @@
+.portfolio-buttons {
+  @include flex(flex, null, center);
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.portfolio-btn {
+  @include font(500, 16px, 1.62, 0.03em);
+  font-family: inherit;
+  color: var(--primary-grey-dark);
+  background-color: var(--btn-bg);
+  cursor: pointer;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0;
+}
+
+.current-btn {
+  color: var(--current-active);
+}

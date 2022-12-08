@@ -1,0 +1,30 @@
+.activity {
+  padding-bottom: 94px;
+  &__title {
+    @include font(null, 36px, 1.17, 0.03em);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.activity-list {
+  @include flex(flex, null, null);
+  gap: 30px;
+  &__wrap {
+    position: relative;
+  }
+  &__box {
+    @include flex(flex, center, center);
+    @include size(100%, 70px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--activity-bg);
+  }
+  &__text {
+    @include font(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+}
