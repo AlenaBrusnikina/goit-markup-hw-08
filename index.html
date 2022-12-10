@@ -27,44 +27,73 @@
         <a class="header__logo link" href="./index.html"
           ><span class="header__desc">Web</span>Studio</a
         >
-        <button class="header__button" type="button" data-menu-btn
-        aria-expanded="false"
-        aria-controls="menu-mobile" >
+        <nav class="nav">
+          <ul class="site-nav list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--current link" href="#">Студія</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="login list">
+          <li class="login-nav">
+            <a class="login-nav__link link" href="mailto:info@devstudio.com">
+              <svg class="login-nav__icon" width="16" height="12">
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="login-nav">
+            <a class="login-nav__link login-nav__link--current link" href="tel:+380961111111">
+              <svg class="login-nav__icon" width="10" height="16">
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <button class="header__button" type="button" data-menu-open>
           <svg  width="40" height="40">
             <use href="./images/symbol-defs.svg#icon-mobile-menu"></use>
           </svg>
         </button>
-       <div class="mobile-menu is-hidden" data-menu>
+        <div class="mobile-menu is-hidden" data-menu>
           <button class="mobile-menu__close" type="button" data-menu-close>
             <svg  width="40" height="40">
               <use href="./images/symbol-defs.svg#icon-mobile-close"></use>
             </svg>
           </button>
-          <nav class="nav">
-            <ul class="site-nav list">
-              <li class="site-nav__item">
-                <a class="site-nav__link site-nav__link--current link" href="#">Студія</a>
+          <nav class="nav-mobile">
+            <ul class="menu-mobile list">
+              <li class="menu-mobile__item">
+                <a class="menu-mobile__link menu-mobile__link--current link" href="#">Студія</a>
               </li>
-              <li class="site-nav__item">
-                <a class="site-nav__link link" href="./portfolio.html">Портфоліо</a>
+              <li class="menu-mobile__item">
+                <a class="menu-mobile__link link" href="./portfolio.html">Портфоліо</a>
               </li>
-              <li class="site-nav__item">
-                <a class="site-nav__link link" href="#">Контакти</a>
+              <li class="menu-mobile__item">
+                <a class="menu-mobile__link link" href="#">Контакти</a>
               </li>
             </ul>
           </nav>
-          <ul class="login list">
-            <li class="login-nav">
-              <a class="login-nav__link link" href="mailto:info@devstudio.com">
-                <svg class="login-nav__icon" width="16" height="12">
+          <ul class="login-mobile list">
+            <li class="login-mobile__nav">
+              <a class="login-mobile__link link" href="mailto:info@devstudio.com">
+                <svg class="login-mobile__icon" width="16" height="12">
                   <use href="./images/symbol-defs.svg#icon-envelope"></use>
                 </svg>
                 info@devstudio.com</a
               >
             </li>
-            <li class="login-nav">
-              <a class="login-nav__link login-nav__link--current link" href="tel:+380961111111">
-                <svg class="login-nav__icon" width="10" height="16">
+            <li class="login-mobile__nav">
+              <a class="login-mobile__link login-mobile__link--current link" href="tel:+380961111111">
+                <svg class="login-mobile__icon" width="10" height="16">
                   <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
@@ -86,8 +115,6 @@
         </div>
       </div>
     </header>
-
-
       <!-- hero -->
       <section class="hero">
         <div class="container hero__container">
@@ -99,7 +126,7 @@
         </div>
       </section>
       <!-- benefits -->
-      <!-- <section class="benefits">
+      <section class="benefits">
         <div class="container">
           <h2 class="benefits__title visually-hidden">Наші переваги</h2>
           <ul class="benefits-list list">
@@ -151,7 +178,7 @@
         </div>
       </section> 
       <!-- activity -->
-      <!-- <section class="activity">
+      <section class="activity">
         <div class="container">
           <h2 class="activity__title">Чим ми займаємося</h2>
           <ul class="activity-list list">
@@ -199,9 +226,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- team -->
-      <!-- <section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team-list list">
