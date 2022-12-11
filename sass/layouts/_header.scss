@@ -1,13 +1,18 @@
 .header {
   background-color: var(--color-white);
-  margin: 10px 0;
   border-bottom: 1px solid var(--border);
+  @media screen and(max-width:767px) {
+    padding: 10px 0;
+  }
 }
 
 .header__logo {
   @include font(null, 24px, 1.166, 0.03em);
   font-family: var(--ff-raleway);
   color: var(--logo-color-black);
+  @media screen and (min-width:1200px){
+    @include font(null, 26px, 1.19, 0.03em);
+  }
 }
 
 .header__desc {
@@ -144,11 +149,9 @@
   transition-timing-function: var(--cubic-bezier);
 }
 
-.site-nav__link {
-  @include font(500, 14px, 1.14, 0.02em);
-}
 
 .site-nav__link {
+  @include font(500, 14px, 1.14, 0.02em);
   display: inline-block;
   padding: 32px 0;
   color: var(--primary-grey-dark);
