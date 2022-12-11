@@ -1,22 +1,42 @@
 .customers {
-  padding-top: 94px;
+  padding-top: 60px;
   &__title {
-    @include font(700, 36px, 1.17, 0.03em);
+    @include font(700, 28px, 1.17, 0.03em);
     text-align: center;
     color: var(--primary-grey-dark);
-    margin-bottom: 50px;
+    margin-bottom: 30px;   
   }
+
+  @media screen and (min-width:1200px) {
+    padding-top: 94px;
+  }
+
 }
 
 .customers-list {
   @include flex(flex, null, center);
-  padding-bottom: 94px;
   gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+
   &__img {
     fill: currentColor;
   }
+
   &__item {
-    @include size(170px, 92px);
+    @include size(210px, 92px);
+
+    @media screen and (min-width:768px) {
+      @include size(226px, 92px);
+    }
+
+    @media screen and (min-width:1200px) {
+      @include size(170px, 92px);
+    }
+  }
+
+  @media screen and (min-width:1200px) {
+    padding-top: 94px;
   }
 }
 

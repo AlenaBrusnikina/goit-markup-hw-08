@@ -2,17 +2,39 @@
   background: var(--hero-bg);
   padding: 60px 0;
   &__container {
-    @include flex(flex, baseline, null);
+    @media screen and (min-width:1200px) {
+      @include flex(flex, baseline, null);
+      gap: 93px;
+    }
+  }
+}
+
+.footer__wrapper {
+  @media screen and (min-width:768px) {
+    @include flex(flex, baseline, center);
+    flex-wrap: wrap;
+    gap: 165px;
+  }
+  @media screen and (min-width:1200px) {
     gap: 93px;
   }
 }
 
 .footer__logo {
-  @include font(null, 26px, 1.19, 0.03em);
+  @include font(null, 24px, 1.16, 0.03em);
   display: block;
+  text-align: center;
   font-family: var(--ff-raleway);
   color: var(--color-white);
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+
+  @media screen and (min-width:1200px){
+   @include font(null, 26px, 1.19, 0.03em);
+  }
+}
+
+.footer-address {
+  text-align: center;
 }
 
 .footer-list__maps {
@@ -30,8 +52,13 @@
 .footer-list__mail,
 .footer-list__tel {
   display: block;
-  margin-top: 9px;
+  margin-top: 2px;
   color: var(--footer-item-link);
+
+  @media screen and(min-width:1200px) {
+    margin-top: 9px;  
+}
+
 }
 
 .footer-list__mail:hover,
@@ -46,11 +73,29 @@
   color: var(--current-active);
 }
 
+
+.footer-link {
+  @media screen and (max-width:1199px) {
+    margin-top: 60px;
+    text-align: center;
+  }
+}
+
+.footer-icons {
+  @media screen and (max-width:767px) {
+    margin-top: 60px;
+  }
+}
+
 .footer-icons__title,
 .footer-link__text {
   @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--color-white);
+  text-align: center;
+  @media screen and (min-width:1200px) {
+    text-align: start;
+  }
 }
 
 .footer-link__text {
@@ -67,12 +112,15 @@
 }
 
 .footer-form {
-  @include flex(flex, null, null);
-  margin-left: auto;
+  text-align: center;
+  @media screen and (min-width:1200px) {
+    @include flex(flex, null, null);
+  }
 }
 
 .footer-form__email {
-  @include size(358px, 50px);
+  @include size(450px, 50px);
+  margin-bottom: 20px;
   margin-right: 12px;
   padding-left: 16px;
   border: 1px solid var(--footer-form-email);
@@ -89,12 +137,21 @@
     @include font(null, 16px, 1.25, 0.03em);
     color: var(--footer-item-link);
   }
+
+  @media screen  and(min-width:1200px) {
+    @include size(358px, 50px);
+    margin-right: 12px;
+    padding-left: 16px;
+}
+
+
 }
 
 .footer-form__btn {
   @include flex(flex, center, center);
   @include size(200px, 50px);
   @include font(700, 16px, 1.88, 0.06em);
+  margin: 0 auto;
   color: var(--color-white);
   background-color: var(--current-active);
   box-shadow: 0px 4px 4px var(--footer-btn);
@@ -107,6 +164,8 @@
     background-color: var(--current-btn);
   }
 }
+
+
 
 .footer-form__img {
   margin-left: 10px;
