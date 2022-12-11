@@ -148,8 +148,8 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 100%;
+  min-height: 100%;
   background-color: var(--color-white);
   -webkit-box-shadow: var(--modal-shadow);
           box-shadow: var(--modal-shadow);
@@ -161,6 +161,19 @@ p {
   transition: opacity 250ms var(--cubic-bezier), -webkit-transform 250ms var(--cubic-bezier);
   transition: transform 250ms var(--cubic-bezier), opacity 250ms var(--cubic-bezier);
   transition: transform 250ms var(--cubic-bezier), opacity 250ms var(--cubic-bezier), -webkit-transform 250ms var(--cubic-bezier);
+  z-index: 1;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-btn {
@@ -351,9 +364,17 @@ p {
 
 .checkbox-field-text,
 .checkbox-field-link {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox-field-text,
+.checkbox-field-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox-field-text {
