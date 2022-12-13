@@ -1,7 +1,14 @@
 .portfolio-buttons {
-  @include flex(flex, null, center);
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width:1200px) {
+    @include flex(flex, null, center);
+    margin-bottom: 50px;
+  }
+
 }
 
 .portfolio-btn {

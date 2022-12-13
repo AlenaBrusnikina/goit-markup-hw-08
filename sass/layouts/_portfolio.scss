@@ -1,15 +1,22 @@
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width:1200px) {
+    padding: 94px 0;
+  }
 }
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
 .portfolio-link {
-  display: block;
+  display: flex;
+  flex-direction: column; 
+  height: 100%;
   cursor: pointer;
   transition: box-shadow 250ms var(--cubic-bezier);
 }
@@ -19,6 +26,7 @@
 }
 
 .portfolio-wrap {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -27,6 +35,13 @@
 
 .portfolio-item {
   background-color: var(--color-white);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 1*30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 2*30px) / 3);
+  }
 }
 
 .portfolio-wrapper {

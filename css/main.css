@@ -636,8 +636,7 @@ body.modal-open {
   -webkit-transition: color 250ms var(--cubic-bezier);
   transition: color 250ms var(--cubic-bezier);
 }
-.menu-open:hover, .menu-open:focus,
-.menu-close:hover,
+.menu-open:focus,
 .menu-close:focus {
   color: var(--current-active);
 }
@@ -659,14 +658,8 @@ body.modal-open {
   pointer-events: none;
 }
 
-.menu-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.menu-mobile {
+  margin-bottom: 306px;
 }
 
 .menu-mobile__link {
@@ -1220,11 +1213,21 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-btn {
@@ -1246,7 +1249,12 @@ body.modal-open {
 }
 
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding: 94px 0;
+  }
 }
 
 .portfolio-list {
@@ -1255,11 +1263,21 @@ body.modal-open {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
 }
 
 .portfolio-link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow 250ms var(--cubic-bezier);
   transition: -webkit-box-shadow 250ms var(--cubic-bezier);
@@ -1273,6 +1291,9 @@ body.modal-open {
 }
 
 .portfolio-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -1281,6 +1302,18 @@ body.modal-open {
 
 .portfolio-item {
   background-color: var(--color-white);
+}
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio-wrapper {

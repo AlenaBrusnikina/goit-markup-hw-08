@@ -150,7 +150,6 @@
   color: var(--logo-color-black);
   transition: color 250ms var(--cubic-bezier);
 
-  &:hover,
   &:focus {
     color: var(--current-active);
   }
@@ -171,9 +170,8 @@
   pointer-events: none;
 }
 
-.menu-wrapper {
-  display: flex;
-  flex-direction: column
+.menu-mobile {
+  margin-bottom: 306px;
 }
 
 .menu-mobile__link {
@@ -204,9 +202,6 @@
     color: var(--current-btn);
   }
 }
-
-
-
 
 .menu-mobile__item,
 .login-mobile__nav:not(:first-child) {
