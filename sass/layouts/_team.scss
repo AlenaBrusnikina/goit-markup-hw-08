@@ -1,6 +1,7 @@
 .team {
   background: var(--btn-bg);
   padding: 60px 0;
+  
   &__title {
     @include font(null, 28px, 1.17, 0.03em);
     text-align: center;
@@ -11,6 +12,7 @@
       margin-bottom: 50px;
     }
   }
+
   @media screen and (min-width:1200px) {
     padding: 94px 0;
   }
