@@ -58,58 +58,59 @@
             >
           </li>
         </ul>
-        <button class="header__button" type="button" data-menu-open>
-          <svg  width="40" height="40">
-            <use href="./images/symbol-defs.svg#icon-mobile-menu"></use>
+
+         <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-button>
+          <svg width="40" height="40" aria-label="перемекач мобільного меню">
+            <use class="icon-menu" href="./images/symbol-defs.svg#icon-mobile-menu"></use>
+            <use class="icon-cross" href="./images/symbol-defs.svg#icon-mobile-close"></use>
           </svg>
         </button>
-        <div class="mobile-menu is-hidden" data-menu>
-          <button class="mobile-menu__close" type="button" data-menu-close>
-            <svg  width="40" height="40">
-              <use href="./images/symbol-defs.svg#icon-mobile-close"></use>
-            </svg>
-          </button>
-          <nav class="nav-mobile">
-            <ul class="menu-mobile list">
-              <li class="menu-mobile__item">
-                <a class="menu-mobile__link menu-mobile__link--current link" href="#">Студія</a>
+
+        <div class="menu" id="menu-mobile" data-menu>
+          <div class="menu-wrapper">
+             <nav class="nav-mobile">
+              <ul class="menu-mobile list">
+                <li class="menu-mobile__item">
+                  <a class="menu-mobile__link menu-mobile__link--current link" href="#">Студія</a>
+                </li>
+                <li class="menu-mobile__item">
+                  <a class="menu-mobile__link link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="menu-mobile__item">
+                  <a class="menu-mobile__link link" href="#">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+  
+            <ul class="login-mobile list">
+              <li class="login-mobile__nav">
+                <a class="login-mobile__link link" href="mailto:info@devstudio.com">
+                  <svg class="login-mobile__icon" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
               </li>
-              <li class="menu-mobile__item">
-                <a class="menu-mobile__link link" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="menu-mobile__item">
-                <a class="menu-mobile__link link" href="#">Контакти</a>
+              <li class="login-mobile__nav">
+                <a class="login-mobile__link login-mobile__link--current link" href="tel:+380961111111">
+                  <svg class="login-mobile__icon" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
               </li>
             </ul>
-          </nav>
-          <ul class="login-mobile list">
-            <li class="login-mobile__nav">
-              <a class="login-mobile__link link" href="mailto:info@devstudio.com">
-                <svg class="login-mobile__icon" width="16" height="12">
-                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="login-mobile__nav">
-              <a class="login-mobile__link login-mobile__link--current link" href="tel:+380961111111">
-                <svg class="login-mobile__icon" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-          <ul class="social list">
-            <li class="social-nav">
-              <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li class="social-nav">
-              <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            <li class="social-nav">
-              <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li class="social-nav">
-              <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          </ul>
+            <ul class="social list">
+              <li class="social-nav">
+                <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li class="social-nav">
+                <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+              <li class="social-nav">
+                <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li class="social-nav">
+                <a class="social-nav__link link" href="" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+          </div>
        </div>
         <div>
         </div>

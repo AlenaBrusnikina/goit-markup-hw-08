@@ -4,6 +4,9 @@
     background-color: var(--color-white);
   }
   
+  body.modal-open {
+    overflow: hidden;
+  }
   
   .link {
     text-decoration: none;

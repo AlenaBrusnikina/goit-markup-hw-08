@@ -43,7 +43,7 @@
   margin: -1px;
 }
 
-.mobile-menu__close, .header__button {
+.menu-button {
   border: 0;
   padding: 0;
   background-color: transparent;
@@ -82,6 +82,10 @@ p {
   font-family: "Roboto", sans-serif;
   color: var(--primary-grey-dark);
   background-color: var(--color-white);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .link {
@@ -131,6 +135,7 @@ p {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--cubic-bezier);
   transition: opacity 250ms var(--cubic-bezier);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -148,8 +153,8 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 100%;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   min-height: 460px;
   background-color: var(--color-white);
   -webkit-box-shadow: var(--modal-shadow);
@@ -162,17 +167,19 @@ p {
   transition: opacity 250ms var(--cubic-bezier), -webkit-transform 250ms var(--cubic-bezier);
   transition: transform 250ms var(--cubic-bezier), opacity 250ms var(--cubic-bezier);
   transition: transform 250ms var(--cubic-bezier), opacity 250ms var(--cubic-bezier), -webkit-transform 250ms var(--cubic-bezier);
-  z-index: 5;
+  z-index: 3;
 }
 @media screen and (min-width: 480px) {
   .modal {
-    min-width: 450px;
+    width: 100%;
+    max-width: 450px;
     min-height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
+    width: 100%;
+    max-width: 528px;
     min-height: 581px;
   }
 }
@@ -430,12 +437,13 @@ p {
 }
 
 .header {
+  position: relative;
   background-color: var(--color-white);
   border-bottom: 1px solid var(--border);
 }
 @media screen and (max-width: 767px) {
   .header {
-    padding: 10px 0;
+    padding: 5px 0;
   }
 }
 
@@ -460,18 +468,6 @@ p {
   color: var(--current-active);
 }
 
-.header__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  .header__button {
-    display: none;
-  }
-}
-
 .header__container,
 .site-nav,
 .login {
@@ -481,9 +477,37 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.mobile-menu {
+.menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  z-index: 5;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu {
   display: none;
   position: fixed;
   top: 0;
@@ -491,13 +515,26 @@ p {
   width: 100vw;
   height: 100vh;
   background-color: var(--color-white);
-  padding: 10px 15px 48px 48px;
-  overflow: auto;
+  padding: 48px 48px 48px 48px;
+  overflow: scroll;
+}
+.menu.is-open {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
 }
 
-.mobile-menu__close {
-  display: block;
-  margin-left: auto;
+.menu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu-mobile__link {
@@ -682,22 +719,7 @@ p {
   }
 }
 
-.login-nav__link {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
-}
-@media screen and (min-width: 1200px) {
-  .login-nav__link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-  }
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .login-nav:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -709,6 +731,10 @@ p {
 }
 
 .login-nav__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -719,6 +745,14 @@ p {
 }
 .login-nav__link:hover, .login-nav__link:hover {
   color: var(--current-active);
+}
+@media screen and (min-width: 1200px) {
+  .login-nav__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 
 .login-nav__icon {
