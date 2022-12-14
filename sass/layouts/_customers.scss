@@ -1,30 +1,32 @@
 .customers {
   padding-top: 60px;
 
-  @media screen and (max-width:1199px) {
+  @media screen and (max-width: 1199px) {
     padding-bottom: 60px;
-    }
-
-  @media screen and (min-width:1200px) {
-   padding: 94px 0;
   }
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+
   &__title {
     @include font(700, 28px, 1.17, 0.03em);
     text-align: center;
     color: var(--primary-grey-dark);
     margin-bottom: 30px;
-    @media screen and (min-width:1200px) {
+    
+    @media screen and (min-width: 1200px) {
       @include font(700, 36px, 1.16, 0.03em);
       margin-bottom: 50px;
     }
-  }  
+  }
 }
 
 .customers-list {
   @include flex(flex, null, center);
   gap: 30px;
   flex-wrap: wrap;
- 
+
   &__img {
     fill: currentColor;
   }
@@ -32,13 +34,13 @@
   &__item {
     flex-basis: calc((100% - 30px) / 2);
     height: 92px;
-    
-    @media screen and (min-width:768px) {
-      flex-basis: calc((100% - 2*30px) / 3);
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 2 * 30px) / 3);
     }
 
-    @media screen and (min-width:1200px) {
-      flex-basis: calc((100% - 5*30px) / 6);
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 5 * 30px) / 6);
     }
   }
 }

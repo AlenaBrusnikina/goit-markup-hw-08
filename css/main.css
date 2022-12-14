@@ -671,7 +671,7 @@ body.modal-open {
   -webkit-transition: color 250ms var(--cubic-bezier);
   transition: color 250ms var(--cubic-bezier);
 }
-.menu-mobile__link:hover, .menu-mobile__link:focus {
+.menu-mobile__link:focus {
   color: var(--current-active);
 }
 
@@ -679,7 +679,7 @@ body.modal-open {
   -webkit-transition: color 250ms var(--cubic-bezier);
   transition: color 250ms var(--cubic-bezier);
 }
-.login-mobile__link:hover, .login-mobile__link:focus {
+.login-mobile__link:focus {
   color: var(--current-active);
 }
 
@@ -687,7 +687,7 @@ body.modal-open {
   -webkit-transition: color 250ms var(--cubic-bezier);
   transition: color 250ms var(--cubic-bezier);
 }
-.social-nav__link:hover, .social-nav__link:focus {
+.social-nav__link:focus {
   color: var(--current-btn);
 }
 
@@ -1218,6 +1218,13 @@ body.modal-open {
   gap: 8px;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 768px) {
+  .portfolio-buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .portfolio-buttons {
     display: -webkit-box;
@@ -1284,7 +1291,6 @@ body.modal-open {
   transition: box-shadow 250ms var(--cubic-bezier);
   transition: box-shadow 250ms var(--cubic-bezier), -webkit-box-shadow 250ms var(--cubic-bezier);
 }
-
 .portfolio-link:hover {
   -webkit-box-shadow: var(--portfolio-link-shadow);
           box-shadow: var(--portfolio-link-shadow);
@@ -1327,7 +1333,7 @@ body.modal-open {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 15px 20px;
   background: var(--portfolio-wrap);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1339,6 +1345,21 @@ body.modal-open {
 .portfolio-link:hover .portfolio-box, .portfolio-link:focus .portfolio-box {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+@media screen and (min-width: 480px) {
+  .portfolio-box {
+    padding: 77px 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio-box {
+    padding: 49px 24px 77px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-box {
+    padding: 63px 24px;
+  }
 }
 
 .portfolio-box-text {
@@ -1393,7 +1414,7 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .footer__wrapper {
+  .page-footer__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1409,7 +1430,7 @@ body.modal-open {
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__wrapper {
+  .page-footer__wrapper {
     gap: 93px;
   }
 }

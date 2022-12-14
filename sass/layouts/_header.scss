@@ -8,12 +8,12 @@
   }
 
   &__logo {
-  @include font(null, 24px, 1.166, 0.03em);
-  font-family: var(--ff-raleway);
-  color: var(--logo-color-black);
+    @include font(null, 24px, 1.166, 0.03em);
+    font-family: var(--ff-raleway);
+    color: var(--logo-color-black);
 
-  @media screen and (min-width: 1200px) {
-    @include font(null, 26px, 1.19, 0.03em);
+    @media screen and (min-width: 1200px) {
+      @include font(null, 26px, 1.19, 0.03em);
     }
   }
 
@@ -153,7 +153,7 @@
   &:focus {
     color: var(--current-active);
   }
-   
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -179,7 +179,6 @@
   color: var(--primary-grey-dark);
   transition: color 250ms var(--cubic-bezier);
 
-  &:hover,
   &:focus {
     color: var(--current-active);
   }
@@ -188,7 +187,6 @@
 .login-mobile__link {
   transition: color 250ms var(--cubic-bezier);
 
-  &:hover,
   &:focus {
     color: var(--current-active);
   }
@@ -197,7 +195,6 @@
 .social-nav__link {
   transition: color 250ms var(--cubic-bezier);
 
-  &:hover,
   &:focus {
     color: var(--current-btn);
   }

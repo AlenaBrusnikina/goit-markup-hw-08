@@ -2,20 +2,21 @@
   background: var(--hero-bg);
   padding: 60px 0;
   &__container {
-    @media screen and (min-width:1200px) {
-      @include flex(flex, baseline, null);
-      gap: 93px;
+    @media screen and (min-width: 1200px) {
+    @include flex(flex, baseline, null);
+    gap: 93px;
     }
   }
 }
 
-.footer__wrapper {
-  @media screen and (min-width:768px) {
+.page-footer__wrapper {
+  @media screen and (min-width: 768px) {
     @include flex(flex, baseline, center);
     flex-wrap: wrap;
     gap: 165px;
   }
-  @media screen and (min-width:1200px) {
+
+  @media screen and (min-width: 1200px) {
     gap: 93px;
   }
 }
@@ -28,17 +29,17 @@
   color: var(--color-white);
   margin-bottom: 28px;
 
-  @media screen and (min-width:1200px){
-   @include font(null, 26px, 1.19, 0.03em);
-   text-align: start;
+  @media screen and (min-width: 1200px) {
+    @include font(null, 26px, 1.19, 0.03em);
+    text-align: start;
   }
 }
 
 .footer-address {
   text-align: center;
-  @media screen and (min-width:1200px){
+  @media screen and (min-width: 1200px) {
     text-align: start;
-   }
+  }
 }
 
 .footer-list__maps {
@@ -58,7 +59,6 @@
   display: block;
   margin-top: 2px;
   color: var(--footer-item-link);
-
 }
 
 .footer-list__mail:hover,
@@ -73,16 +73,15 @@
   color: var(--current-active);
 }
 
-
 .footer-link {
-  @media screen and (max-width:1199px) {
+  @media screen and (max-width: 1199px) {
     margin-top: 60px;
     text-align: center;
   }
 }
 
 .footer-icons {
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-top: 60px;
   }
 }
@@ -93,7 +92,8 @@
   text-transform: uppercase;
   color: var(--color-white);
   text-align: center;
-  @media screen and (min-width:1200px) {
+
+  @media screen and (min-width: 1200px) {
     text-align: start;
   }
 }
@@ -113,7 +113,8 @@
 
 .footer-form {
   text-align: center;
-  @media screen and (min-width:1200px) {
+  
+  @media screen and (min-width: 1200px) {
     @include flex(flex, null, null);
   }
 }
@@ -140,13 +141,11 @@
     color: var(--footer-item-link);
   }
 
-  @media screen  and(min-width:1200px) {
+  @media screen and(min-width:1200px) {
     width: 358px;
     margin-right: 12px;
     padding-left: 16px;
-}
-
-
+  }
 }
 
 .footer-form__btn {
@@ -166,8 +165,6 @@
     background-color: var(--current-btn);
   }
 }
-
-
 
 .footer-form__img {
   margin-left: 10px;
